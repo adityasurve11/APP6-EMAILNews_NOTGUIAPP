@@ -5,4 +5,5 @@ url = "https://newsapi.org/v2/everything?q=tesla&from=2024-08-21&sortBy=publishe
 
 request = requests.get(url)
 content = request.json()
-print(content)
+for article in content["articles"]:
+    print(article["title"])
